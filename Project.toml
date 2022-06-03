@@ -1,6 +1,7 @@
 [deps]
 AdaptiveParticleMCMC = "80dd4f21-a330-47dc-9fe5-4758e06b94f1"
 ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+ComponentArrays = "b0b7db55-cfe3-40fc-9ded-d10e2dbeff66"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
 LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
