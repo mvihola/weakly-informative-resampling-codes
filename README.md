@@ -1,2 +1,8 @@
 # weakly-informative-resampling-codes
-Codes for "On resampling schemes for particle filters with weakly informative observations"
+
+Source codes for "On resampling schemes for particle filters with weakly informative observations"
+
+# How to inspect the results
+
+# How to run the experiments
+
