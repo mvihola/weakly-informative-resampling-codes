@@ -27,9 +27,9 @@ This should install all the required packages for you.
 
 You may produce the plots shown in the paper from pre-calculated summaries as follows:
 ```julia
-include("box2_experiment_plots.jl")
-include("box2_adaptive_experiment_plots.jl")
-include("luminosity_experiment_plots.jl")
+include("src/box2_experiment_plots.jl")
+include("src/box2_adaptive_experiment_plots.jl")
+include("src/luminosity_experiment_plots.jl")
 ```
 The scripts produce more plots than those reported in the paper.
 
@@ -58,9 +58,9 @@ sbatch_commandlist -t 4:00:00 -mem 4000 -commands cmds_box2.txt
 
 After running the files, you may run the following in the Julia REPL:
 ```julia
-include("box2_experiment_gather.jl")
-include("box2_adaptive_experiment_gather.jl")
-include("luminosity_experiment_gather.jl")
+include("src/box2_experiment_gather.jl")
+include("src/box2_adaptive_experiment_gather.jl")
+include("src/luminosity_experiment_gather.jl")
 ```
 These commands create the files that were visualised above.
 
@@ -85,8 +85,9 @@ Here is a short description of the code files in `src` folder:
 
 ### Experiments in Sections 7.3
 
-* `out/luminosity_experiment_summaries.jld2`: Saved summaries of experiments in Section 7.3
 * `luminosity_data.jld2`: The synthetic data used in the experiment
+* `out/luminosity_single_experiment.jld2`: Run single experiment and plot Figure 7 
+* `out/luminosity_experiment_summaries.jld2`: Saved summaries of experiments in Section 7.3
 * `luminosity_experiment_*.jl`: The experiments
 * `run_luminosity_experiment.jl`: Run an individual experiment
 * `random_walk_poissn.jl`: Definition of the model
