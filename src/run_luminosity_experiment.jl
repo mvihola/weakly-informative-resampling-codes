@@ -1,3 +1,6 @@
+using Pkg
+Pkg.activate("..")
+
 using ArgParse, JLD2, AdaptiveParticleMCMC
 
 include("random_walk_poisson.jl")

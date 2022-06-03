@@ -13,7 +13,7 @@ _init_path_storage, _copy_reference!,
 _save_reference!, _reference_log_likelihood
 include("gen_smc.jl")
 
-@load "luminosity_data.jld2" # -> data
+data = load("$(@__DIR__)/luminosity_data.jld2")["data"] 
 
 # "Physical time" of the scenario
 N = 32
@@ -41,4 +41,4 @@ p_latent = show_latent(data, t, out)
 
 plot!(p_latent, title="", ylabel=L"X_t", xlabel=L"t")
 p = horizplot(p_latent; size=(800,200))
-savefig(p, "luminosity_data_result.pdf")
+savefig(p, "$(@__DIR__)/out/luminosity_data_result.pdf")

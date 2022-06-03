@@ -1,3 +1,6 @@
+using Pkg
+Pkg.activate("..")
+
 using ArgParse, JLD2
 
 include("gen_smc.jl")

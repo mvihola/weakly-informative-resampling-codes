@@ -9,7 +9,9 @@ resamplings = (:Multinomial, :Residual, :Killing,
 :Systematic, :SystematicPartition,
 :SSP, :SSPPartition)
 
-out = load("$(@__DIR__)/out/luminosity_experiment_summaries.jld2")
+prefix = "$(@__DIR__)/out/luminosity"
+
+out = load("$(prefix)_experiment_summaries.jld2")
 acc = out["acc"]
 ire = out["ire"]
 ρs1 = out["ρs1"]
@@ -99,7 +101,7 @@ xticks!(p_ire, log2.(Ns), [string(N) for N in Ns])
 
 p1 = twinplot(p_acc, p_ire; widths=(0.45,0.55))
 
-savefig(p1, "luminosity_acc_ire.pdf")
+savefig(p1, "$(prefix)_acc_ire.pdf")
 
 p_rho = Vector{Any}(undef, length(Ns))
 
@@ -115,5 +117,5 @@ for i = 1:n_Ns
     title!(p_rho[i], "\$N=$(Ns[i])\$")
 end
 p_acf = horizplot(p_rho[2:6]..., size=(800,200))
-savefig(p_acf, "luminosity_acf.pdf")
+savefig(p_acf, "$(prefix)_acf.pdf")
 
