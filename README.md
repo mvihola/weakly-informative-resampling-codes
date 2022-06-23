@@ -51,7 +51,7 @@ sh cmds_box2.txt
 ```
 would run all the experiments in Section 7.1.  Because there are many experiments, running all the experiments like this takes a lot of time.
 
-We ran the experiments instead in [CSC](https://www.csc.fi/en/home) Slurm cluster, using the following command:
+We ran the experiments in the [CSC](https://www.csc.fi/en/home) Slurm cluster, using the following command:
 ```shell
 sbatch_commandlist -t 4:00:00 -mem 4000 -commands cmds_box2.txt
 ```
