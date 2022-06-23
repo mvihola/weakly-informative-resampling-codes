@@ -43,15 +43,15 @@ sh box2_experiment_commandlist.sh > cmds_box2.txt
 sh box2_adaptive_experiment.commandlist.sh > cmds_box2_adaptive.txt
 sh luminosity_experiment_commandlist.sh > cmds_luminosity.txt
 ```
-This creates three text files, with all commands that run the experiments reported in Section 7.1, 7.2 and 7.3, respectgively.
+This creates three text files, with all commands that run the experiments reported in Section 7.1, 7.2 and 7.3, respectively.
 
 In principle, it should be possible to run all the commands in a single file at once, of instance:
 ```shell
 sh cmds_box2.txt
 ```
-would run all the experiments in Section 7.1. 
+would run all the experiments in Section 7.1.  Because there are many experiments, running all the experiments like this takes a lot of time.
 
-However, because there are many experiments, running all experiments like above would take a long time. Instead, the commands can be easily run in a Slurm cluster (with Julia installed):
+We ran the experiments instead in [CSC](https://www.csc.fi/en/home) Slurm cluster, using the following command:
 ```shell
 sbatch_commandlist -t 4:00:00 -mem 4000 -commands cmds_box2.txt
 ```
