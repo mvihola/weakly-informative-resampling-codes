@@ -5,9 +5,11 @@ Source codes for the experiments in:
 > N. Chopin, S. S. Singh, T. Soto and M. Vihola. **On resampling schemes for particle filters with weakly informative observations**.
 [arXiv:2203.10037](http://arxiv.org/abs/2203.10037)
 
+(If you wish to use the studied resampling algorithms in your own particle filter implementation, please see the separate [Resamplings.jl](https://github.com/skarppinen/Resamplings.jl) package.)
+
 ## Setting up
 
-Start by installing a fresh copy of [Julia](https://julialang.org/downloads/). The experiments were run with Julia 1.7.1, which is recommended for reproducibility. (You can also use your existing Julia installation, and the  codes should work with other than Julia 1.7.1. too.)
+Start by installing a fresh copy of [Julia](https://julialang.org/downloads/). The experiments were run with Julia 1.7.1, which is recommended for reproducibility. (Of course, you can also use your existing Julia installation, and the  codes should work with other than Julia 1.7.1. too.)
 
 Get a local copy of the codes and start julia by running the following commends (in a shell):
 ```shell
@@ -70,8 +72,8 @@ Here is a short description of the code files in `src` folder:
 
 ### Generic codes
 
-* `gen_smc.jl`: A 'generic' particle filter implementation, inspired by [SequentialMonteCarlo.jl](https://github.com/awllee/SequentialMonteCarlo.jl), which accomodates a variety of resampling algorithms
-* `resampling.jl`: The resampling algorithms that can be used with `gen_smc.jl`
+* `gen_smc.jl`: A 'generic' particle filter implementation, inspired by [SequentialMonteCarlo.jl](https://github.com/awllee/SequentialMonteCarlo.jl), which allows for using different resampling algorithms
+* `resampling.jl`: The resampling algorithms to be used with `gen_smc.jl` (**NB:** Similar functionality can be found in the [Resamplings.jl](https://github.com/skarppinen/Resamplings.jl) package.)
 
 ### Experiments in Sections 7.1 and 7.2
 
