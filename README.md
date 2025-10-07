@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/499437081.svg)](https://doi.org/10.5281/zenodo.17285160)
+
 # Weakly informative resampling codes
 
 Source codes for the experiments in:
